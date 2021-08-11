@@ -1,12 +1,12 @@
 {
-	"name": "emacs-mcx",
-	"displayName": "Awesome Emacs Keymap",
+	"name": "emacs-mcx-aoimoe",
+	"displayName": "Awesome Emacs Keymap (forked)",
 	"description": "Emacs Friendly Keymap with multi cursor support, improved mark-mode experience, clipboard and kill-ring integration, and lots of improvements and bug fixes.",
 	"version": "0.32.0",
-	"publisher": "tuttieee",
+	"publisher": "AoiMoe",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/whitphx/vscode-emacs-mcx"
+		"url": "https://github.com/AoiMoe/vscode-emacs-mcx"
 	},
 	"engines": {
 		"vscode": "^1.51.0"
