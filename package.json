@@ -1442,6 +1442,11 @@
 				"when": "editorTextFocus && !suggestWidgetVisible && config.emacs-mcx.useMetaPrefixCtrlLeftBracket"
 			},
 			{
+				"key": "ctrl+z",
+				"command": "emacs-mcx.scrollDownCommand",
+				"when": "editorTextFocus && !suggestWidgetVisible"
+			},
+			{
 				"key": "pageup",
 				"command": "emacs-mcx.isearchExit",
 				"when": "editorFocus && findWidgetVisible && !isComposing",
@@ -1478,6 +1483,14 @@
 				"key": "ctrl+[ v",
 				"command": "emacs-mcx.isearchExit",
 				"when": "editorFocus && findWidgetVisible && !isComposing && config.emacs-mcx.useMetaPrefixCtrlLeftBracket",
+				"args": {
+					"then": "emacs-mcx.scrollDownCommand"
+				}
+			},
+			{
+				"key": "ctrl+z",
+				"command": "emacs-mcx.isearchExit",
+				"when": "editorFocus && findWidgetVisible && !isComposing",
 				"args": {
 					"then": "emacs-mcx.scrollDownCommand"
 				}
@@ -2069,35 +2082,25 @@
 				"when": "editorTextFocus"
 			},
 			{
-				"key": "ctrl+w",
-				"command": "emacs-mcx.killRegion",
-				"when": "editorTextFocus && !editorReadonly"
-			},
-			{
-				"key": "ctrl+w",
-				"command": "emacs-mcx.isearchExit",
-				"when": "editorFocus && findWidgetVisible && !isComposing"
-			},
-			{
 				"key": "alt+w",
-				"command": "emacs-mcx.copyRegion",
-				"when": "editorTextFocus && !config.emacs-mcx.useMetaPrefixMacCmd"
+				"command": "emacs-mcx.killRegion",
+				"when": "editorTextFocus && !editorReadonly && !config.emacs-mcx.useMetaPrefixMacCmd"
 			},
 			{
 				"key": "alt+w",
 				"mac": "cmd+w",
-				"command": "emacs-mcx.copyRegion",
-				"when": "editorTextFocus && config.emacs-mcx.useMetaPrefixMacCmd"
+				"command": "emacs-mcx.killRegion",
+				"when": "editorTextFocus && !editorReadonly && config.emacs-mcx.useMetaPrefixMacCmd"
 			},
 			{
 				"key": "escape w",
-				"command": "emacs-mcx.copyRegion",
-				"when": "editorTextFocus && config.emacs-mcx.useMetaPrefixEscape"
+				"command": "emacs-mcx.killRegion",
+				"when": "editorTextFocus && !editorReadonly && config.emacs-mcx.useMetaPrefixEscape"
 			},
 			{
 				"key": "ctrl+[ w",
-				"command": "emacs-mcx.copyRegion",
-				"when": "editorTextFocus && config.emacs-mcx.useMetaPrefixCtrlLeftBracket"
+				"command": "emacs-mcx.killRegion",
+				"when": "editorTextFocus && !editorReadonly && config.emacs-mcx.useMetaPrefixCtrlLeftBracket"
 			},
 			{
 				"key": "alt+w",
@@ -2119,6 +2122,16 @@
 				"key": "ctrl+[ w",
 				"command": "emacs-mcx.isearchExit",
 				"when": "editorFocus && findWidgetVisible && !isComposing && config.emacs-mcx.useMetaPrefixCtrlLeftBracket"
+			},
+			{
+				"key": "ctrl+w",
+				"command": "emacs-mcx.copyRegion",
+				"when": "editorTextFocus"
+			},
+			{
+				"key": "ctrl+w",
+				"command": "emacs-mcx.isearchExit",
+				"when": "editorFocus && findWidgetVisible && !isComposing"
 			},
 			{
 				"key": "ctrl+y",
